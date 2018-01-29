@@ -88,7 +88,7 @@ with open(aligned_path) as aligned_file, open(cleaned_path, "wb+") as cleaned_fi
         # clean the middle values. we ultimately want pipe delimited
         clean_text_value = text_value.replace("|"," ")
         # smash together with pipes
-        new_line = "|".join([id_value, text_value, score_values])
+        new_line = "{0}|{1}{2}".format(id_value, text_value, clean_score_values)
         # write to the file with a newline
         cleaned_file.write(new_line + "\n")
     aligned_file.close()
