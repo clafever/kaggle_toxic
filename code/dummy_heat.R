@@ -50,6 +50,10 @@ get_total <- function(a_name,b_name) {
 
 cp_list <- mapply(get_total,coc_labels_df$rowname, coc_labels_df$key)
 coc_labels_cp_df <-cbind(coc_labels_df, cp_list) %>% select(pof = rowname, given = key, cp=cp_list)
-
 coc_labels_cp_df %>% ggplot(aes(x=pof, y=given, fill=cp)) + geom_tile()
 
+### TO DO
+# clean up var names some, kinda ugly and cryptic
+# plot the 3 together
+# clean up colors and stuff
+# that mapply is awful because of global var in function
