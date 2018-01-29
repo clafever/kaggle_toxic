@@ -83,6 +83,7 @@ with open(aligned_path) as aligned_file, open(cleaned_path, "wb+") as cleaned_fi
         # extract the score values
         score_values = end_regex.search(line).group()
         # extract the "meat" of the line
+        clean_score_values = score_values.replace(",","|")
         text_value = text_regex.search(line).group(1)
         # clean the middle values. we ultimately want pipe delimited
         clean_text_value = text_value.replace("|"," ")
