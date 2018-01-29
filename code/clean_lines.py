@@ -39,7 +39,7 @@ aligned_path = "{0}{1}{2}".format(in_basename,"_aligned", in_extension)
 cleaned_path = "{0}{1}{2}".format(in_basename,"_cleaned", in_extension)
 
 # show on console
-print "outputting algined lines to: {0}".format(aligned_path)
+print "outputting aligned lines to: {0}".format(aligned_path)
 print "outputting cleaned lines to: {0}".format(cleaned_path)
 
 # useful regexes. start included only if needed
