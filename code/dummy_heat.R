@@ -1,5 +1,5 @@
 
-library(tm)
+# library(tm)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
